@@ -1,29 +1,33 @@
 :root {
-  --mint: #dde9d5;
-  --brown: #201110;
-  --gray: #a7a7a7;
+    --mint: #dde9d5;
+    --brown: #201110;
+    --gray: #a7a7a7;
 }
 
 html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  background-color: var(--mint);
+    background-color: var(--mint);
 }
 
+a {
+    color: var(--brown);
+}    
+
 header {
-  background-color: var(--brown);
-  height: 185px;
+    background-color: var(--brown);
+    height: 185px;
 }
 
 nav {
-  display: flex;
-  justify-content: normal;
-  align-items: flex-start;
+    display: flex;
+    justify-content: normal;
+    align-items: flex-start;
 }
 
 nav a {
@@ -38,15 +42,67 @@ nav a {
 }
 
 h1 {
-  font-size: 36px;
-  font-weight: bold;
-  margin: 20px 50px;
-  padding: 10px;
-  display: inline-block;
-  color: var(--brown);
-  background-color: var(--mint);
-  border-radius: 5px;
-  -webkit-box-shadow: 7.5px 7.5px 0px 0px rgba(167, 167, 167, 1);
-  -moz-box-shadow: 7.5px 7.5px 0px 0px rgba(167, 167, 167, 1);
-  box-shadow: 7.5px 7.5px 0px 0px rgba(167, 167, 167, 1);
+    font-size: 36px;
+    font-weight: bold;
+    margin: 20px 50px;
+    padding: 10px 15px;
+    display: inline-block;
+    color: var(--brown);
+    background-color: var(--mint);
+    border-radius: 5px;
+    -webkit-box-shadow: 7.5px 7.5px 0px 0px rgba(167, 167, 167, 1);
+    -moz-box-shadow: 7.5px 7.5px 0px 0px rgba(167, 167, 167, 1);
+    box-shadow: 7.5px 7.5px 0px 0px rgba(167, 167, 167, 1);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.post {
+    width: 95%;
+    border: 3px solid var(--brown);
+    margin: 10px;
+}
+
+.post-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--brown);
+}
+
+.post-headline {
+    flex-basis: 80%;
+}
+
+.post-user-date {
+    flex-basis: 20%;
+    text-align: right;
+}
+
+.post h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--mint);
+}
+
+.post h4 {
+    font-size: 14px;
+    font-weight: normal;
+    color: var(--gray);
+    flex-basis: 80%;
+}
+
+.post p {
+    font-size: 18px;
+    font-weight: normal;
+    padding: 15px;
+    color: var(--brown);
 }

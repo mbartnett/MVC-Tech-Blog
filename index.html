@@ -13,13 +13,57 @@
 <body>
 <header>
     <nav>
-        <a href="#">Home</a>
-        <a href="#">Dashboard</a>
-        <a href="#">Login</a>
+        <a href="#"><h2>Home</h2></a>
+        <a href="#"><h2>Dashboard</h2></a>
+        <a href="#"><h2>Login</h2></a>
+        <a href="#"><h2>Logout</h2></a>
     </nav>
     <h1>The Tech Blog</h1>
 </header>
-<main></main>
+<main>
+    <section class="post">
+        <div class="post-header">        
+            <div class="post-headline">
+                <h3>Why MVC is so important</h2>
+            </div>
+            <div class="post-user-date">
+                <h4>Posted by USER on DATE</h3>
+            </div>
+        </div>
+        <p>MVC allows developers to maintain a true separation of concerns, devising their code between the Model layer for data, the View layer for design, and the Controller layer for application logic.</p>
+    </section>
+    <section class="post">
+        <div class="post-header">        
+            <div class="post-headline">
+                <h3>Authentication vs. Authorization</h2>
+            </div>
+            <div class="post-user-date">
+                <h4>Posted by USER on DATE</h3>
+            </div>
+        </div>
+        <p>There is a difference between authentication and authorization. Authentication means confirming your own identity, whereas authorization means being allowed access to the system.</p>
+    </section>
+    
+    <section class ="login">
+        <h2>Login</h2>
+        <form action="/login" method="POST">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
+            <button type="submit">Login</button>
+            <a href="/signup">Sign up for an account</a>
+        </form>
+    </section>
+
+    <section class="comment">
+        <form action="/comment" method="POST">
+            <label for="comment">Comment</label>
+            <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</main>
 <footer></footer>
 </body>
 </html>
