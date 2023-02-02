@@ -1,3 +1,5 @@
+/* Colors */
+
 :root {
     --mint: #dde9d5;
     --brown: #201110;
@@ -5,6 +7,8 @@
     --darkgray: #666666;
     --white: #ffffff;
 }
+
+/* Top level */
 
 html {
     height: 100%;
@@ -20,6 +24,41 @@ body {
 a {
     color: var(--brown);
 }    
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 20px 50px;
+    padding: 10px 15px;
+    display: inline-block;
+    color: var(--brown);
+    background-color: var(--mint);
+    border-radius: 5px;
+    -webkit-box-shadow: 7.5px 7.5px 0px 0px rgba(167, 167, 167, 1);
+    -moz-box-shadow: 7.5px 7.5px 0px 0px rgba(167, 167, 167, 1);
+    box-shadow: 7.5px 7.5px 0px 0px rgba(167, 167, 167, 1);
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--mint);
+}
+
+h4 {
+    font-size: 14px;
+    font-weight: normal;
+    color: var(--gray);
+}
+
+p {
+    font-size: 18px;
+    font-weight: normal;
+    padding: 15px;
+    color: var(--brown);
+}
+
+/* Header & nav */
 
 header {
     background-color: var(--brown);
@@ -43,19 +82,7 @@ nav a {
 
 }
 
-h1 {
-    font-size: 36px;
-    font-weight: bold;
-    margin: 20px 50px;
-    padding: 10px 15px;
-    display: inline-block;
-    color: var(--brown);
-    background-color: var(--mint);
-    border-radius: 5px;
-    -webkit-box-shadow: 7.5px 7.5px 0px 0px rgba(167, 167, 167, 1);
-    -moz-box-shadow: 7.5px 7.5px 0px 0px rgba(167, 167, 167, 1);
-    box-shadow: 7.5px 7.5px 0px 0px rgba(167, 167, 167, 1);
-}
+/* Main sections */
 
 main {
     display: flex;
@@ -85,6 +112,8 @@ section {
 margin: 10px 0;
 }
 
+/* Posts */
+
 .post {
     width: 95%;
     border: 3px solid var(--brown);
@@ -111,36 +140,15 @@ margin: 10px 0;
     text-align: right;
 }
 
-h3 {
-    font-size: 20px;
-    font-weight: bold;
-    color: var(--mint);
-}
+/* Forms & buttons*/
 
-h4 {
-    font-size: 14px;
-    font-weight: normal;
-    color: var(--gray);
-    flex-basis: 80%;
-}
-
-p {
-    font-size: 18px;
-    font-weight: normal;
-    padding: 15px;
-    color: var(--brown);
-}
-
-input[type="text"], textarea {
+input[type="text"], input[type="content"], textarea {
     color: var(--brown);
     font-size: 16px;
     font-family: Arial, sans-serif;
     border: none;
-    padding: 5px;
-}
-
-textarea {
-    border: none;
+    padding: 20px;
+    resize: vertical;
 }
 
 label {
@@ -164,12 +172,14 @@ button {
     border: none;
 }
 
-.login button, .comment button {
+.login button, .comment button, .create-post button {
     background-color: var(--darkgray);
     color: var(--white);
     border: none;
     border-radius: 5px;
 }
+
+/* Posts */
 
 .new-post button {
     background-color: var(--brown);
@@ -179,8 +189,83 @@ button {
     font-size: 22px;
 }
 
-.comment textarea {
+.comment textarea, .create-post textarea {
     width: 95%;
     height: 100px;
     margin: 10px auto;
+}
+
+.create-post input, select, textarea, button {
+    display: block;
+    width: 95%;
+    margin: 10px auto;
+    height: 45px;
+    border: none;
+}
+
+/* Dashboard */
+
+.dashboard-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 45px;
+    margin: 10px;
+    padding: 10px;
+    background-color: var(--darkgray);
+    border: none;
+    border-radius: 5px;
+}
+
+.dashboard-content span {
+    font-size: 18px;
+    font-weight: normal;
+    padding: 15px;
+    color: var(--white);
+}
+
+.dashboard-content db-title {
+    flex-basis: 80%;
+}
+
+.dashboard-content db-date {
+    flex-basis: 20%;
+    text-align: right;
+}
+
+/* Media queries */
+
+@media (max-width: 600px) {
+.post-headline {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+.post-user-date {
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--mint);
+}
+
+h4 {
+    font-size: 12px;
+    font-weight: normal;
+    color: var(--gray);
+}
+
+p {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: normal;
+    padding: 15px;
+    color: var(--brown);
 }

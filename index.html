@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,74 +8,124 @@
     <link rel="stylesheet" href="./public/css/reset.css">
     <link rel="stylesheet" href="./public/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>The Tech Blog</title>
 </head>
+
 <body>
-<header>
-    <nav>
-        <a href="#"><h2>Home</h2></a>
-        <a href="#"><h2>Dashboard</h2></a>
-        <a href="#"><h2>Login</h2></a>
-        <a href="#"><h2>Logout</h2></a>
-    </nav>
-    <h1>The Tech Blog</h1>
-</header>
-<main>
-    <section class="post">
-        <div class="post-header">        
-            <div class="post-headline">
-                <h3>Why MVC is so important</h2>
+    <header>
+        <!-- NAV -->
+        <nav>
+            <a href="#">
+                <h2>Home</h2>
+            </a>
+            <a href="#">
+                <h2>Dashboard</h2>
+            </a>
+            <a href="#">
+                <h2>Login</h2>
+            </a>
+            <a href="#">
+                <h2>Logout</h2>
+            </a>
+        </nav>
+        <h1>The Tech Blog</h1>
+    </header>
+    <main>
+        <!-- POSTS -->
+        <section class="post">
+            <div class="post-header">
+                <div class="post-headline">
+                    <h3>Why MVC is so important</h2>
+                </div>
+                <div class="post-user-date">
+                    <h4>Posted by USER on DATE</h3>
+                </div>
             </div>
-            <div class="post-user-date">
-                <h4>Posted by USER on DATE</h3>
+            <p>MVC allows developers to maintain a true separation of concerns, devising their code between the Model
+                layer for data, the View layer for design, and the Controller layer for application logic.</p>
+        </section>
+        <section class="post">
+            <div class="post-header">
+                <div class="post-headline">
+                    <h3>Authentication vs. Authorization</h2>
+                </div>
+                <div class="post-user-date">
+                    <h4>Posted by USER on DATE</h3>
+                </div>
             </div>
-        </div>
-        <p>MVC allows developers to maintain a true separation of concerns, devising their code between the Model layer for data, the View layer for design, and the Controller layer for application logic.</p>
-    </section>
-    <section class="post">
-        <div class="post-header">        
-            <div class="post-headline">
-                <h3>Authentication vs. Authorization</h2>
+            <p>There is a difference between authentication and authorization. Authentication means confirming your own
+                identity, whereas authorization means being allowed access to the system.</p>
+        </section>
+        <!-- LOGIN -->
+        <section class="login">
+            <div class="section-header">
+                <h3>Login</h3>
             </div>
-            <div class="post-user-date">
-                <h4>Posted by USER on DATE</h3>
+            <div class="section-body">
+                <form action="login" method="POST">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+                    <button type="submit">Login</button>
+                    <label for="signup"><a href="/signup">Sign up instead</a></label>
+                </form>
             </div>
+        </section>
+        <!-- COMMENT -->
+        <section class="comment">
+            <div class="section-header"></div>
+            <div class="section-body">
+                <form action="comment" method="POST">
+                    <label for="comment">Comment</label>
+                    <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+                    <button class="login" type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+        <!-- POSTED COMMENT -->
+        <section class="posted-comment">
+            <div class="section-header">
+                <h3>Comments</h3>
+            </div>
+            <div class="section-body">
+                <p>I just learned about this in my class!</p>
+                <p>– USER, DATE</p>
+            </div>
+        </section>
+        <!-- NEW POST -->
+        <section class="create-post">
+            <div class="section-header">
+                <h3>Create New Post</h3>
+            </div>
+            <div class="section-body">
+                <form action="create-post" method="POST">
+                    <label for="title">Title</label>
+                    <input type="text" name="title" id="title">
+                    <label for="content">Content</label>
+                    <textarea name="content" id="content" cols="30" rows="10"></textarea>
+                    <button class="create-post" type="submit">Create</button>
+                </form>
+            </div>
+        </section>
+        <!-- NEW POST BUTTON -->
+        <div class="new-post">
+            <button id="new-post" type="button">+ New Post</button>
         </div>
-        <p>There is a difference between authentication and authorization. Authentication means confirming your own identity, whereas authorization means being allowed access to the system.</p>
-    </section>
-    
-    <section class="login">
-        <div class="section-header">
-            <h3>Login</h3>
-        </div>
-        <div class="section-body">
-        <form action="login" method="POST">
-            <label for="username">Username</label>
-            <input type="text" name="username" id="username">
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password">
-            <button type="submit">Login!</button>
-            <label for="signup"><a href="/signup">Sign up instead</a></label>
-        </form>
-        </div>
-    </section>
-
-    <section class="comment">
-        <div class="section-header"></div>
-        <div class="section-body">
-        <form action="/comment" method="POST">
-            <label for="comment">Comment</label>
-            <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
-            <button class="login" type="submit">Submit</button>
-        </form>
-        </div>
-    </section>
-
-    <div class="new-post">
-    <button id="new-post" type="button">+ New Post</button>
-    </div>
-</main>
-<footer></footer>
+        <!-- DASHBOARD CONTENT-->
+        <section class="dashboard-content">
+            <div class="db-title">
+                <span>TITLE</span>
+            </div>
+            <div class="db-date">
+            <span>DATE</span>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
 </body>
+
 </html>
