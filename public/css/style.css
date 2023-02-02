@@ -23,7 +23,7 @@ body {
 
 a {
     color: var(--brown);
-}    
+}
 
 h1 {
     font-size: 36px;
@@ -114,7 +114,7 @@ section {
 }
 
 .section-body {
-margin: 10px 0;
+    margin: 10px 0;
 }
 
 /* Posts */
@@ -147,7 +147,9 @@ margin: 10px 0;
 
 /* Forms & buttons*/
 
-input[type="text"], input[type="content"], textarea {
+input[type="text"],
+input[type="content"],
+textarea {
     color: var(--brown);
     font-size: 16px;
     font-family: Arial, sans-serif;
@@ -169,7 +171,10 @@ button {
     margin: 10px 0;
 }
 
-.login input, select, textarea, button {
+.login input,
+select,
+textarea,
+button {
     display: block;
     width: 95%;
     margin: 10px auto;
@@ -177,7 +182,9 @@ button {
     border: none;
 }
 
-.login button, .comment button, .post button {
+.login button,
+.comment button,
+.post button {
     background-color: var(--darkgray);
     color: var(--white);
     border: none;
@@ -194,13 +201,17 @@ button {
     font-size: 22px;
 }
 
-.comment textarea, .post textarea {
+.comment textarea,
+.post textarea {
     width: 95%;
     height: 100px;
     margin: 10px auto;
 }
 
-.post input, select, textarea, button {
+.post input,
+select,
+textarea,
+button {
     display: block;
     width: 95%;
     margin: 10px auto;
@@ -243,47 +254,47 @@ button {
 /* Media queries */
 
 @media (max-width: 600px) {
-.post-headline {
-    flex-basis: 100%;
-    text-align: center;
-}
+    .post-headline {
+        flex-basis: 100%;
+        text-align: center;
+    }
 
-.post-user-date {
-    flex-basis: 100%;
-}
+    .post-user-date {
+        flex-basis: 100%;
+    }
 
-#masthead {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    margin: 20px;
-}
+    #masthead {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        margin: 20px;
+    }
 
-h1 {
-    text-align: center;
-    margin: 0;
-    padding: 10px;
-    font-size: 36px;
+    h1 {
+        text-align: center;
+        margin: 0;
+        padding: 10px;
+        font-size: 36px;
+    }
 
-}
+    h3 {
+        font-size: 18px;
+        font-weight: bold;
+        color: var(--mint);
+    }
 
-h3 {
-    font-size: 18px;
-    font-weight: bold;
-    color: var(--mint);
-}
+    h4 {
+        font-size: 12px;
+        font-weight: normal;
+        color: var(--gray);
+    }
 
-h4 {
-    font-size: 12px;
-    font-weight: normal;
-    color: var(--gray);
-}
-
-p {
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: normal;
-    padding: 15px;
-    color: var(--brown);
+    p {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: normal;
+        padding: 15px;
+        color: var(--brown);
+    }
 }
