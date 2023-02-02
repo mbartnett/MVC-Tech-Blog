@@ -131,10 +131,16 @@ p {
     color: var(--brown);
 }
 
-button {
-    font-size: 18px;
-    font-weight: normal;
-    margin: 10px 0;
+input[type="text"], textarea {
+    color: var(--brown);
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    border: none;
+    padding: 5px;
+}
+
+textarea {
+    border: none;
 }
 
 label {
@@ -144,11 +150,18 @@ label {
     margin-left: 2.5%;
 }
 
+button {
+    font-size: 18px;
+    font-weight: normal;
+    margin: 10px 0;
+}
+
 .login input, select, textarea, button {
     display: block;
     width: 95%;
     margin: 10px auto;
     height: 45px;
+    border: none;
 }
 
 .login button, .comment button {
@@ -156,6 +169,14 @@ label {
     color: var(--white);
     border: none;
     border-radius: 5px;
+}
+
+.new-post button {
+    background-color: var(--brown);
+    color: var(--white);
+    width: 175px;
+    border-radius: 5px;
+    font-size: 22px;
 }
 
 .comment textarea {
