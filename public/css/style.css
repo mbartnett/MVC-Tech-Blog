@@ -79,7 +79,6 @@ nav a {
     color: var(--mint);
     text-decoration: none;
     margin: 15px;
-
 }
 
 /* Main sections */
@@ -172,7 +171,7 @@ button {
     border: none;
 }
 
-.login button, .comment button, .create-post button {
+.login button, .comment button, .post button {
     background-color: var(--darkgray);
     color: var(--white);
     border: none;
@@ -195,7 +194,7 @@ button {
     margin: 10px auto;
 }
 
-.create-post input, select, textarea, button {
+.post input, select, textarea, button {
     display: block;
     width: 95%;
     margin: 10px auto;
@@ -245,8 +244,6 @@ button {
 
 .post-user-date {
     flex-basis: 100%;
-    text-align: center;
-    margin-top: 10px;
 }
 }
 
