@@ -81,6 +81,12 @@ nav a {
     margin: 15px;
 }
 
+#masthead {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
 /* Main sections */
 
 main {
@@ -245,6 +251,21 @@ button {
 .post-user-date {
     flex-basis: 100%;
 }
+
+#masthead {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    font-size: 36px;
+
 }
 
 h3 {
