@@ -2,7 +2,7 @@
 
 :root {
     --mint: #dde9d5;
-    --brown: #201110;
+    --brown: #251010;
     --gray: #a7a7a7;
     --darkgray: #666666;
     --white: #ffffff;
@@ -194,7 +194,7 @@ button {
     font-size: 22px;
 }
 
-.comment textarea, .create-post textarea {
+.comment textarea, .post textarea {
     width: 95%;
     height: 100px;
     margin: 10px auto;
