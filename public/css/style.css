@@ -2,6 +2,8 @@
     --mint: #dde9d5;
     --brown: #201110;
     --gray: #a7a7a7;
+    --darkgray: #666666;
+    --white: #ffffff;
 }
 
 html {
@@ -62,6 +64,26 @@ main {
     align-items: center;
 }
 
+section {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    border: 3px solid var(--brown);
+    margin: 10px;
+}
+
+.section-header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--brown);
+}
+
+.section-body {
+margin: 10px 0;
+}
+
 .post {
     width: 95%;
     border: 3px solid var(--brown);
@@ -87,22 +109,49 @@ main {
     text-align: right;
 }
 
-.post h3 {
+h3 {
     font-size: 20px;
     font-weight: bold;
     color: var(--mint);
 }
 
-.post h4 {
+h4 {
     font-size: 14px;
     font-weight: normal;
     color: var(--gray);
     flex-basis: 80%;
 }
 
-.post p {
+p{
     font-size: 18px;
     font-weight: normal;
     padding: 15px;
     color: var(--brown);
+}
+
+button {
+    font-size: 18px;
+    font-weight: normal;
+    margin: 10px 0;
+}
+
+label {
+    font-size: 18px;
+    font-weight: normal;
+    color: var(--brown);
+    margin-left: 2.5%;
+}
+
+.login input, select, textarea, button {
+    display: block;
+    width: 95%;
+    margin: 10px auto;
+    height: 45px;
+}
+
+.login button {
+    background-color: var(--darkgray);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
 }

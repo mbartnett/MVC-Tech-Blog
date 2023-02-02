@@ -44,23 +44,27 @@
         <p>There is a difference between authentication and authorization. Authentication means confirming your own identity, whereas authorization means being allowed access to the system.</p>
     </section>
     
-    <section class ="login">
-        <h2>Login</h2>
+    <section class="login">
+        <div class="section-header">
+            <h3>Login</h3>
+        </div>
+        <div class="section-body">
         <form action="/login" method="POST">
             <label for="username">Username</label>
             <input type="text" name="username" id="username">
             <label for="password">Password</label>
             <input type="password" name="password" id="password">
-            <button type="submit">Login</button>
-            <a href="/signup">Sign up for an account</a>
+            <button type="submit">Login!</button>
+            <label for="signup"><a href="/signup">Sign up instead</a></label>
         </form>
+        </div>
     </section>
 
     <section class="comment">
         <form action="/comment" method="POST">
             <label for="comment">Comment</label>
             <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
-            <button type="submit">Submit</button>
+            <button class="login" type="submit">Submit</button>
         </form>
     </section>
 </main>
