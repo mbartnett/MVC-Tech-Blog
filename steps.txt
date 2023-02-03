@@ -1,0 +1,61 @@
+// Overview
+
+Visit the site and see homepage with blog posts, navigation links and login option.
+Click on homepage link to go to homepage.
+Click on other navigation links to sign up or sign in.
+Sign up by entering username and password.
+Sign in later by entering username and password.
+See navigation links for homepage, dashboard, and logout while signed in.
+Click on homepage to see existing blog posts with post title and date.
+Click on a blog post to view post title, contents, and comments with option to leave a comment.
+Leave a comment by entering comment and clicking submit.
+Click on dashboard to see existing blog posts and add a new blog post.
+Add new blog post by entering title and contents.
+View and update/delete existing blog posts from dashboard.
+Log out from site.
+After idling, log in again to add, update, or delete comments.
+
+// Steps
+
+Create the homepage template, which will include:
+a. Existing blog posts (if any have been posted)
+b. Navigation links for the homepage and the dashboard
+c. The option to log in
+
+Set up routing for the homepage so that it is displayed when the user visits the site for the first time.
+
+Add the option for users to sign up or sign in when they click on any links in the navigation.
+
+Create a sign-up page where users can create a username and password.
+
+Save user credentials when the user clicks the sign-up button.
+
+Log the user into the site once their credentials have been saved.
+
+Create a login page where users can enter their username and password.
+
+Display the homepage and the dashboard with the option to log out when the user is signed in.
+
+Create a template for the blog post, which will include:
+a. The post title
+b. The post contents
+c. The post creator’s username
+d. The date created
+
+Add the ability to leave a comment on a blog post while signed in.
+
+Save comments and update the post to display the comment, the comment creator’s username, and the date created when the user clicks the submit button.
+
+Create a dashboard where the user can view any blog posts they have already created and add a new blog post.
+
+Create a page for adding a new blog post, which will prompt the user to enter both a title and contents for their blog post.
+
+Save the title and contents of the new blog post and take the user back to an updated dashboard with their new post.
+
+Add the ability to delete or update an existing post from the dashboard.
+
+Implement a logout feature in the navigation.
+
+Sign the user out of the site when they click the logout option in the navigation.
+
+Implement an idle timeout for the site, which will prompt the user to log in again before they can add, update, or delete comments.
