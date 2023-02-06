@@ -171,7 +171,7 @@ button {
     margin: 10px 0;
 }
 
-.login input,
+.login input, .signup input,
 select,
 textarea,
 button {
@@ -182,7 +182,7 @@ button {
     border: none;
 }
 
-.login button,
+.login button, .signup button,
 .comment button,
 .post button {
     background-color: var(--darkgray);
