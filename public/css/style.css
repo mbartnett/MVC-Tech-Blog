@@ -149,6 +149,7 @@ section {
 
 input[type="text"],
 input[type="content"],
+input[type="password"],
 textarea {
     color: var(--brown);
     font-size: 16px;
