@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>The Tech Blog</title>
 </head>
 
@@ -22,21 +24,27 @@
             <a href="/dashboard">
                 <h2>Dashboard</h2>
             </a>
-            <a href="/login">
-                <h2>Login</h2>
-            </a>
+            {{#if loggedIn}}
             <a href="/logout">
                 <h2>Logout</h2>
             </a>
+            {{else}}
+            <a href="/login">
+                <h2>Login</h2>
+            </a>
+            {{/if}}
         </nav>
         <div id="masthead">
             <h1>The Tech Blog</h1>
-        </div>  
+        </div>
     </header>
     <main>
-        {{{body}}}    
+        {{{body}}}
     </main>
-    <footer></footer>
+    <footer>
+    </footer>
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
 </body>
-
 </html>
