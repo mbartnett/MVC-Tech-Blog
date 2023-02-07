@@ -1,0 +1,11 @@
+<section class="post">
+    <div class="post-header">
+        <div class="post-headline">
+            <h3>{{post.title}}</h3>
+        </div>
+        <div class="post-user-date">
+            <h4>Posted by {{post.user.username}} on {{format_date post.date_created}}</h4>
+        </div>
+    </div>
+    <p>{{post.contents}}.</p>
+</section>

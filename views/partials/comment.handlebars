@@ -1,0 +1,11 @@
+<section class="posted-comment">
+    <div class="section-header">
+        <h3>Comments</h3>
+    </div>
+    {{#each this}}
+    <div class="section-body">
+        <p>{{text}}</p>
+        <p>– {{user.username}}, {{format_date post.date_created}}</p>
+    </div>
+    {{/each}}
+</section>
