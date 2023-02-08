@@ -34,6 +34,29 @@ router.get('/signup/', (req, res) => {
     res.render('signup');
 });
 
+router.get('/post/:id', (req, res) => {
+    Post.findOne({
+        where: {
+            id: req.params.id
+        },
+        include: [
+            {
+                model: User
+            },
+            {
+                model: Comment
+            }
+        ]
+    }).then((post) => {
+        if (!post) {
+            res.status(404).json({ message: 'No post found with this id' });
+            return;
+        }
+        post = post.get({ plain: true });
+        res.render('post', { post });
+    }); 
+});
+
 router.get('/dashboard', withAuth, (req, res) => {
     Post.findAll({
         where: {
