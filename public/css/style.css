@@ -23,6 +23,7 @@ body {
 
 a {
     color: var(--brown);
+    text-decoration: none;
 }
 
 h1 {
@@ -80,6 +81,11 @@ nav a {
     text-decoration: none;
     margin: 15px;
 }
+
+nav a:hover, h1:hover {
+    color: var(--gray);
+}
+
 
 #masthead {
     display: flex;
@@ -190,6 +196,12 @@ button {
     color: var(--white);
     border: none;
     border-radius: 5px;
+}
+
+.login button:hover, .signup button:hover,
+.comment button:hover,
+.post button:hover {
+    background-color: var(--gray);
 }
 
 /* Posts */

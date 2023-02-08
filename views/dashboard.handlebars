@@ -15,9 +15,11 @@
 {{#if posts.length}}
 {{#each posts as |post|}}
 <section class="dashboard-content">
+    <a href="/posts/{{post.id}}">
     <div class="db-title">
-        <a href="/posts/{{post.id}}"><span>{{post.title}}</span></a>
+        <span>{{post.title}}</span>
     </div>
+    </a>
     <div class="db-date">
         <span>{{format_date post.date_created}}</span>
     </div>
