@@ -54,7 +54,7 @@ router.get('/posts/:id', (req, res) => {
         }
         post = post.get({ plain: true });
         res.render('edit-post', { post });
-    }); 
+    });
 });
 
 router.get('/dashboard', withAuth, (req, res) => {
@@ -70,6 +70,30 @@ router.get('/dashboard', withAuth, (req, res) => {
     }).then((posts) => {
         posts = posts.map((post) => post.get({ plain: true }));
         res.render('dashboard', { posts });
+    });
+});
+
+router.get('/comment/:id', withAuth, (req, res) => {
+    Post.findOne({
+        where: {
+            id: req.params.id
+        },
+        include: [
+            {
+                model: User
+            },
+            {
+                model: Comment
+            }
+        ]
+    }).then((post) => {
+        if (!post) {
+            res.status(404).json({ message: 'No post found with this id' });
+            return;
+        }
+        post = post.get({ plain: true });
+        console.log(post)
+        res.render('comment', { post });
     });
 });
 
