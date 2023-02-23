@@ -10,6 +10,18 @@
     <p>{{post.contents}}</p>
 </section>
 
+{{!-- <section class="posted-comment">
+    <div class="section-header">
+        <h3>Comments</h3>
+    </div>
+    {{#each post.comments as |comment|}}
+    <div class="section-body">
+        <p>{{comment.text}}</p>
+        <p>– {{user.username}}, {{format_date comment.createdAt}}</p>
+    </div>
+    {{/each}}
+</section> --}}
+
 <section class="posted-comment">
     <div class="section-header">
         <h3>Comments</h3>
@@ -20,6 +32,11 @@
         <p>– {{user.username}}, {{format_date comment.createdAt}}</p>
     </div>
     {{/each}}
+    {{#unless post.comments}}
+    <div class="section-body">
+        <p>Be the first to comment!</p>
+    </div>
+    {{/unless}}
 </section>
 
 <section class="comment">

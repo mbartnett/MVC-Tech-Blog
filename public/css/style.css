@@ -62,6 +62,7 @@ p {
     font-weight: normal;
     padding: 15px;
     color: var(--brown);
+    /* background-color: var(--white); */
 }
 
 /* Header & nav */

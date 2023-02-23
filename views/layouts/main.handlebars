@@ -23,7 +23,7 @@
             </a>
             {{#if loggedIn}}
             <a href="/logout">
-                <h2>Logout</h2>
+                <h2 id="logout">Logout</h2>
             </a>
             {{else}}
             <a href="/login">
@@ -41,7 +41,7 @@
     <footer>
     </footer>
     {{#if loggedIn}}
-    <script src="/javascript/logout.js"></script>
+    <script src="/js/logout.js"></script>
     {{/if}}
 </body>
 </html>
