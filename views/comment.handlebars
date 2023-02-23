@@ -1,15 +1,3 @@
-<section class="posted-comment">
-    <div class="section-header">
-        <h3>Comments</h3>
-    </div>
-    {{#each post.comments as |comment|}}
-    <div class="section-body">
-        <p>{{comment.text}}</p>
-        <p>– {{user.username}}, {{format_date comment.createdAt}}</p>
-    </div>
-    {{/each}}
-</section>
-
 <section class="post">
     <div class="post-header">
         <div class="post-headline">
@@ -20,6 +8,18 @@
         </div>
     </div>
     <p>{{post.contents}}</p>
+</section>
+
+<section class="posted-comment">
+    <div class="section-header">
+        <h3>Comments</h3>
+    </div>
+    {{#each post.comments as |comment|}}
+    <div class="section-body">
+        <p>{{comment.text}}</p>
+        <p>– {{user.username}}, {{format_date comment.createdAt}}</p>
+    </div>
+    {{/each}}
 </section>
 
 <section class="comment">
