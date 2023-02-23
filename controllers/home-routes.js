@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
     }).then((posts) => {
         console.log(posts);
         posts = posts.map((post) => post.get({ plain: true }));
-        res.render('home', { posts });
+        res.render('home', { posts, loggedIn: req.session.loggedIn });
     });
 });
 
@@ -53,7 +53,7 @@ router.get('/posts/:id', (req, res) => {
             return;
         }
         post = post.get({ plain: true });
-        res.render('edit-post', { post });
+        res.render('edit-post', { post, loggedIn: req.session.loggedIn  });
     });
 });
 
@@ -69,7 +69,7 @@ router.get('/dashboard', withAuth, (req, res) => {
         ]
     }).then((posts) => {
         posts = posts.map((post) => post.get({ plain: true }));
-        res.render('dashboard', { posts });
+        res.render('dashboard', { posts, loggedIn: req.session.loggedIn  });
     });
 });
 
@@ -83,7 +83,13 @@ router.get('/comment/:id', withAuth, (req, res) => {
                 model: User
             },
             {
-                model: Comment
+                model: Comment,
+                include: [
+                    {
+                        model: User
+                    }
+                ]
+                    
             }
         ]
     }).then((post) => {
@@ -93,7 +99,7 @@ router.get('/comment/:id', withAuth, (req, res) => {
         }
         post = post.get({ plain: true });
         console.log(post)
-        res.render('comment', { post });
+        res.render('comment', { post, loggedIn: req.session.loggedIn  });
     });
 });
 

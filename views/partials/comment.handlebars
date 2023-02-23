@@ -14,9 +14,9 @@
     <div class="section-header"></div>
     <div class="section-body">
         {{post.title}}
-        <form action="/comment" method="POST">
+        <form class="comment-form" action="/comment" method="POST">
             <label for="comment">Comment</label>
-            <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+            <textarea name="comment-body" id="comment" cols="30" rows="10"></textarea>
             <button class="login" type="submit">Submit</button>
         </form>
     </div>

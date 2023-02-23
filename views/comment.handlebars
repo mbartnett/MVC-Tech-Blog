@@ -2,22 +2,35 @@
     <div class="section-header">
         <h3>Comments</h3>
     </div>
-    {{#each post.comments}}
+    {{#each post.comments as |comment|}}
     <div class="section-body">
-        <p>{{text}}</p>
-        <p>– {{user.username}}, {{format_date date_created}}</p>
+        <p>{{comment.text}}</p>
+        <p>– {{user.username}}, {{format_date comment.createdAt}}</p>
     </div>
     {{/each}}
+</section>
+
+<section class="post">
+    <div class="post-header">
+        <div class="post-headline">
+            <h3><a href="/comment/{{post.id}}" id="comment">{{post.title}}</a></h2>
+        </div>
+        <div class="post-user-date">
+            <h4>Posted by {{post.user.username}} on {{format_date post.createdAt}}</h3>
+        </div>
+    </div>
+    <p>{{post.contents}}</p>
 </section>
 
 <section class="comment">
     <div class="section-header"></div>
     <div class="section-body">
-        {{post.title}}
-        <form id="comment">
+        <form class="comment-form">
             <label for="comment">Comment</label>
-            <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+            <textarea name="comment-body" id="comment" cols="30" rows="10"></textarea>
             <button class="login" type="submit">Submit</button>
         </form>
     </div>
 </section>
+
+<script src="/js/comment.js"></script>
