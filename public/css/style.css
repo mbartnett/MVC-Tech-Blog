@@ -197,7 +197,7 @@ button {
 
 .login button, .signup button,
 .comment button,
-.post button {
+.post button, .edit-comment button {
     background-color: var(--darkgray);
     color: var(--white);
     border: none;
@@ -206,7 +206,7 @@ button {
 
 .login button:hover, .signup button:hover,
 .comment button:hover,
-.post button:hover {
+.post button:hover, .edit-comment button:hover {
     background-color: var(--gray);
 }
 
