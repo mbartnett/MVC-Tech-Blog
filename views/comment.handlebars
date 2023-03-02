@@ -16,7 +16,7 @@
     </div>
     {{#each post.comments as |comment|}}
     <div class="section-body">
-        <p>{{comment.text}}</p>
+        <p><a href="/edit-comment/{{comment.id}}">{{comment.text}}</a></p>
         <p>– {{user.username}}, {{format_date comment.createdAt}}</p>
     </div>
     {{/each}}
@@ -27,10 +27,10 @@
     {{/unless}}
 </section>
 
-<section class="post" style="border:none;">
+{{!-- <section class="post" style="border:none;">
 <button class="edit-comment" type="submit">Update Comment</button>
 <button class="edit-comment" id="delete">Delete</button>
-</section>
+</section> --}}
 
 <section class="comment">
     <div class="section-header"></div>
