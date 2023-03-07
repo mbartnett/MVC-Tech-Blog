@@ -20,32 +20,31 @@
         {{/if}}
     </div>
     {{#if loggedIn}}
-    {{#each post.comments as |comment|}}
-    <div class="section-body">
-        <p><a href="/edit-comment/{{comment.id}}">{{comment.text}}</a></p>
-        <p>– {{user.username}}, {{format_date comment.createdAt}}</p>
-    </div>
-    {{/each}}
-    {{#unless post.comments}}
-    <div class="section-body">
-        <p>Be the first to comment!</p>
-    </div>
-    {{/unless}}
+        {{#each post.comments as |comment|}}
+        <div class="section-body">
+            <p><a href="/edit-comment/{{comment.id}}">{{comment.text}}</a></p>
+            <p>– {{user.username}}, {{format_date comment.createdAt}}</p>
+        </div>
+        {{/each}}
+        {{#unless post.comments}}
+        <div class="section-body">
+            <p>Be the first to comment!</p>
+        </div>
+        {{/unless}}
     {{else}}
-    {{#each post.comments as |comment|}}
-    <div class="section-body">
-        <p>{{comment.text}}</p>
-        <p>– {{user.username}}, {{format_date comment.createdAt}}</p>
-    </div>
-    {{/each}}
-    {{#unless post.comments}}
-    <div class="section-body">
-        <p>Be the first to comment!</p>
-    </div>
-    {{/unless}}
+        {{#each post.comments as |comment|}}
+        <div class="section-body">
+            <p>{{comment.text}}</p>
+            <p>– {{user.username}}, {{format_date comment.createdAt}}</p>
+        </div>
+        {{/each}}
+        {{#unless post.comments}}
+        <div class="section-body">
+            <p>Be the first to comment!</p>
+        </div>
+        {{/unless}}
     {{/if}}
 </section>
-
 
 <section class="comment">
     {{#if loggedIn}}
@@ -68,6 +67,5 @@
         {{/if}}
     </div>
 </section>
-
 
 <script src="/js/comment.js"></script>
