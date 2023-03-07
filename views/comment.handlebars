@@ -12,7 +12,11 @@
 
 <section class="posted-comment">
     <div class="section-header">
+        {{#if loggedIn}}
+        <h3>Update / Delete Comments</h3>
+        {{else}}
         <h3>Comments</h3>
+        {{/if}}
     </div>
     {{#each post.comments as |comment|}}
     <div class="section-body">
