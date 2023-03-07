@@ -277,6 +277,15 @@ button {
     color: var(--white);
 }
 
+.dashboard-content a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.dashboard-content a:hover {
+    text-decoration: underline;
+}
+
 .dashboard-content db-title {
     flex-basis: 80%;
 }
