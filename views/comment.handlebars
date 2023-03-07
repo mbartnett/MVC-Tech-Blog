@@ -1,10 +1,11 @@
 <section class="post">
     <div class="post-header">
         <div class="post-headline">
-            <h3><a href="/comment/{{post.id}}" id="comment">{{post.title}}</a></h2>
+            {{!-- <h3><a href="/comment/{{post.id}}" id="comment">{{post.title}}</a></h3> --}}
+            <h3>{{post.title}}</h3>
         </div>
         <div class="post-user-date">
-            <h4>Posted by {{post.user.username}} on {{format_date post.createdAt}}</h3>
+            <h4>Posted by {{post.user.username}} on {{format_date post.createdAt}}</h4>
         </div>
     </div>
     <p>{{post.contents}}</p>
@@ -13,7 +14,7 @@
 <section class="posted-comment">
     <div class="section-header">
         {{#if loggedIn}}
-        <h3>Update / Delete Comments</h3>
+        <h3>(Update / Delete) Comments</h3>
         {{else}}
         <h3>Comments</h3>
         {{/if}}
