@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 3001;
 const sess = {
     secret: 'Super secret secret',
     cookie: {
-        maxAge: 5 * 60 * 1000 // Timeout after 5 minutes in milliseconds
+        maxAge: 15 * 60 * 1000 // Timeout after 15 minutes in milliseconds
     },
     resave: false,
     saveUninitialized: true,

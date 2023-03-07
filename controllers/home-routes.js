@@ -98,7 +98,7 @@ router.get('/comment/:id', withAuth, (req, res) => {
             return;
         }
         post = post.get({ plain: true });
-        console.log(post)
+        // console.log(post)
         res.render('comment', { post, loggedIn: req.session.loggedIn  });
     });
 });
@@ -119,7 +119,7 @@ router.get('/edit-comment/:id', withAuth, (req, res) => {
             return;
         }
         comment = comment.get({ plain: true });
-        console.log(comment)
+        // console.log(comment)
         res.render('edit-comment', { comment, loggedIn: req.session.loggedIn  });
     });
 });
