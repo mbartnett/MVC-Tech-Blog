@@ -27,14 +27,16 @@ router.post('/', withAuth, (req, res) => {
     }
 });
 
-router.put('/:id', async (req, res) => {
+router.put('/:id', withAuth, async (req, res) => {
     // try {
-        console.log(req.body);
+        const comment = await Comment.findOne({ where: { id: req.params.id }});
+        console.log(req.body, comment);
         const commentData = await Comment.update(req.body, {
             where: {
                 id: req.params.id,
             },
         });
+        console.log(commentData, 'commentData')
         if (!commentData) {
             res.status(404).json({ message: 'No comment found with this id' });
             return;
