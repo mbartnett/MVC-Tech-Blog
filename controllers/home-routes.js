@@ -73,7 +73,7 @@ router.get('/dashboard', withAuth, (req, res) => {
     });
 });
 
-router.get('/comment/:id', withAuth, (req, res) => {
+router.get('/comment/:id', (req, res) => {
     Post.findOne({
         where: {
             id: req.params.id
