@@ -7,7 +7,7 @@ async function commentFormHandler(event) {
         window.location.toString().split('/').length - 1
     ];
 
-alert(text)
+// alert(text)
 
     if (text) {
         const response = await fetch('/api/comments', {
