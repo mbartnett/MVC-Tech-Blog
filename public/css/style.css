@@ -227,6 +227,14 @@ button {
     margin: 10px auto;
 }
 
+.comment input {
+    display: block;
+    width: 95%;
+    margin: 0 auto 25px;
+    height: 45px;
+    border: none;
+}
+
 .post input,
 select,
 textarea,

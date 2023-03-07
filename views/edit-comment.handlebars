@@ -1,4 +1,4 @@
-<section class="post">
+<section class="comment">
     <div class="section-header">
         <h3>Comments</h3>
     </div>
@@ -6,10 +6,10 @@
         <form id="edit-comment-form">
         <label for="title"></label>
         <input type="text" value="{{comment.text}}" name="title" id="title">
-        <p>– {{comment.user.username}}, {{format_date comment.createdAt}}</p>
-        <input class="edit-post" data-id="{{comment.id}}" type="submit">Update Comment</input>
+        {{!-- <p>– {{comment.user.username}}, {{format_date comment.createdAt}}</p> --}}
+        <button class="edit-comment" data-id="{{comment.id}}" id="update">Update Comment</button>
         </form>
-        <button class="edit-post" data-id="{{comment.id}}" id="delete">Delete Comment</button>
+        <button class="edit-comment" data-id="{{comment.id}}" id="delete">Delete Comment</button>
     </div>
 </section>
 

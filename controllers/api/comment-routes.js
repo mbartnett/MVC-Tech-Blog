@@ -28,7 +28,7 @@ router.post('/', withAuth, (req, res) => {
 });
 
 router.put('/:id', withAuth, async (req, res) => {
-    // try {
+    try {
         const comment = await Comment.findOne({ where: { id: req.params.id }});
         console.log(req.body, comment);
         const commentData = await Comment.update(req.body, {
@@ -42,9 +42,9 @@ router.put('/:id', withAuth, async (req, res) => {
             return;
         }
         res.status(200).json(commentData);
-    // } catch (err) {
-    //     res.status(500).json(err);
-    // }
+    } catch (err) {
+        res.status(500).json(err);
+    }
 });
 
 router.delete('/:id', async (req, res) => {
