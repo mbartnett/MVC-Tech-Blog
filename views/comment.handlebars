@@ -21,11 +21,7 @@
     </div>
     {{#each post.comments as |comment|}}
     <div class="section-body">
-        {{#if loggedIn}}
         <p><a href="/edit-comment/{{comment.id}}">{{comment.text}}</a></p>
-        {{else}}
-        <p>{{comment.text}}</p>
-        {{/if}}
         <p>– {{user.username}}, {{format_date comment.createdAt}}</p>
     </div>
     {{/each}}
