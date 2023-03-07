@@ -7,13 +7,4 @@ const withAuth = (req, res, next) => {
     }
 };
 
-// const withAuth = (req, res, next) => {
-//     if (!req.session.loggedIn) {
-//         res.locals.loggedIn = false;
-//     } else {
-//         res.locals.loggedIn = true;
-//     }
-//     next();
-// };
-
 module.exports = withAuth;

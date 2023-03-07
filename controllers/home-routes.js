@@ -22,7 +22,7 @@ router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
         res.redirect('/');
         return;
-    } 
+    }
     res.render('login');
 });
 
@@ -53,7 +53,7 @@ router.get('/posts/:id', (req, res) => {
             return;
         }
         post = post.get({ plain: true });
-        res.render('edit-post', { post, loggedIn: req.session.loggedIn  });
+        res.render('edit-post', { post, loggedIn: req.session.loggedIn });
     });
 });
 
@@ -69,7 +69,7 @@ router.get('/dashboard', withAuth, (req, res) => {
         ]
     }).then((posts) => {
         posts = posts.map((post) => post.get({ plain: true }));
-        res.render('dashboard', { posts, loggedIn: req.session.loggedIn  });
+        res.render('dashboard', { posts, loggedIn: req.session.loggedIn });
     });
 });
 
@@ -89,7 +89,7 @@ router.get('/comment/:id', (req, res) => {
                         model: User
                     }
                 ]
-                    
+
             }
         ]
     }).then((post) => {
@@ -99,7 +99,7 @@ router.get('/comment/:id', (req, res) => {
         }
         post = post.get({ plain: true });
         // console.log(post)
-        res.render('comment', { post, loggedIn: req.session.loggedIn  });
+        res.render('comment', { post, loggedIn: req.session.loggedIn });
     });
 });
 
@@ -120,9 +120,16 @@ router.get('/edit-comment/:id', withAuth, (req, res) => {
         }
         comment = comment.get({ plain: true });
         // console.log(comment)
-        res.render('edit-comment', { comment, loggedIn: req.session.loggedIn  });
+        res.render('edit-comment', { comment, loggedIn: req.session.loggedIn });
     });
 });
+
+router.get('/logout', (req, res) => {
+    req.session.destroy(() => {
+        res.redirect('/');
+    });
+});
+
 
 module.exports = router;
 

@@ -29,16 +29,16 @@
 
 <section class="comment">
     {{#if loggedIn}}
-    <div class="section-header"></div>
+    <div class="section-header"><h3>Submit a Comment</h3></div>
     <div class="section-body">
             <form class="comment-form">
-                <label for="comment">Comment</label>
+                {{!-- <label for="comment"><b>Comment</b></label> --}}
                 <textarea name="comment-body" id="comment" cols="30" rows="10"></textarea>
                 <button class="login" type="submit">Submit</button>
             </form>
         {{else}}
         <div class="section-header">
-            <h3>Log in</h3>
+            <h3>Login</h3>
         </div>
         <div class="section-body">
             <p>Please <a href="/login/">login</a> to create, update, or delete comments.</p>

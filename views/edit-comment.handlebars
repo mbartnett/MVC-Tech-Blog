@@ -1,12 +1,12 @@
 <section class="comment">
     <div class="section-header">
-        <h3>Comments</h3>
+        <h3>Update / Delete Comment</h3>
     </div>
     <div class="section-body">
         <form id="edit-comment-form">
         <label for="title"></label>
         <input type="text" value="{{comment.text}}" name="title" id="title">
-        {{!-- <p>– {{comment.user.username}}, {{format_date comment.createdAt}}</p> --}}
+        <p style="margin-left:24px;">– {{comment.user.username}}, {{format_date comment.createdAt}}</p>
         <button class="edit-comment" data-id="{{comment.id}}" id="update">Update Comment</button>
         </form>
         <button class="edit-comment" data-id="{{comment.id}}" id="delete">Delete Comment</button>
