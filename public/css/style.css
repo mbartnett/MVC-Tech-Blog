@@ -30,6 +30,8 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Headings */
+
 h1 {
     font-size: 36px;
     font-weight: bold;
@@ -61,6 +63,8 @@ h4 {
     color: var(--mint);
 }
 
+/* Paragraph */
+
 p {
     font-size: 18px;
     font-weight: normal;
@@ -69,7 +73,7 @@ p {
     /* background-color: var(--white); */
 }
 
-/* Header & nav */
+/* Header, nav, and masthead */
 
 header {
     background-color: var(--brown);
