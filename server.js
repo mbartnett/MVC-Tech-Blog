@@ -13,7 +13,9 @@ const PORT = process.env.PORT || 3001;
 
 const sess = {
     secret: 'Super secret secret',
-    cookie: {},
+    cookie: {
+        maxAge: 5 * 60 * 1000 // Timeout after 5 minutes in milliseconds
+    },
     resave: false,
     saveUninitialized: true,
     store: new SequelizeStore({
@@ -36,5 +38,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
-    app.listen(PORT, () => console.log('Now listening'));
+app.listen(PORT, () => console.log('Now listening'));
 });
