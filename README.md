@@ -20,7 +20,7 @@ To install or test this application, start by cloning the repository to your loc
 
 ## Usage
 
-Deployed application: [Heroku URL](Heroku URL)
+Deployed application: [https://mbartnett-mvc-tech-blog.herokuapp.com/](https://mbartnett-mvc-tech-blog.herokuapp.com/)
 
 ![MVC Tech Blog](./public/Images/MVC-Tech-Blog.png)
 
