@@ -16,13 +16,22 @@ A CMS-style blog site where developers can publish and comment on posts.
 
 ## Installation & Testing
 
-To install or test this application, start by cloning the repository to your local machine. While in the root directory of the project, install the Node dependencies by typing `npm install`, and then seed the database by typing `npm seed`. Make sure to create a MySQL database, seed it with test data, and configure database access in the .env file. Finally, start the server by typing `npm start` and open `localhost:3001` in your browser.
+&bull; Clone the repository to your local machine.<br>
+&bull; Install the Node dependencies by running `npm install` in the root directory of the project.<br>
+&bull; Seed the database by running `npm seed`. This will populate the database with some initial data.<br>
+&bull; Make sure to create a MySQL database,`USE` it, `SOURCE` the schema.sql file, and configure database access in the .env file. This is necessary for the application to connect to the database and interact with it.<br>
+&bull; Start the server by running `npm start`, then open `localhost:3001` in your browser to access the application.
 
 ## Usage
 
 Deployed application: [https://mbartnett-mvc-tech-blog.herokuapp.com/](https://mbartnett-mvc-tech-blog.herokuapp.com/)
 
-![MVC Tech Blog](./public/Images/MVC-Tech-Blog.png)
+![MVC Tech Blog](./public/Images/MVC-Tech-Blog.png)<br><br>
+![MVC Tech Blog 2](./public/Images/MVC-Tech-Blog-2.png)<br><br>
+![MVC Tech Blog 3](./public/Images/MVC-Tech-Blog-3.png)<br><br>
+![MVC Tech Blog 4](./public/Images/MVC-Tech-Blog-4.png)<br><br>
+![MVC Tech Blog 5](./public/Images/MVC-Tech-Blog-5.png)<br><br>
+![MVC Tech Blog 6](./public/Images/MVC-Tech-Blog-6.png)
 
 ## License
 
